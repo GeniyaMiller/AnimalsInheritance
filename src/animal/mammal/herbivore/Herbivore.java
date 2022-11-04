@@ -1,20 +1,20 @@
-package Animals.Mammals.Predators;
+package animal.mammal.herbivore;
 
-import Animals.Mammals.Mammals;
+import animal.mammal.Mammal;
 
-public class Predators extends Mammals {
+public class Herbivore extends Mammal {
 
-
-    public Predators(String animals, String name, int age, String livingEnvironment, int speed, String typeEat) {
+    public Herbivore(String animals, String name, int age, String livingEnvironment, int speed, String typeEat) {
         super(animals, name, age, livingEnvironment, speed, typeEat);
     }
 
-    public void hunt() {
-        System.out.println("I hunt");
+    public void graze(){
+        System.out.println("I am grazing");
     }
+
     @Override
     public void eat(String animals) {
-        System.out.println("I eat meat");
+        System.out.println("I eat grass and leaves");
     }
 
     @Override
@@ -44,9 +44,6 @@ public class Predators extends Mammals {
                 '}' + getClass();
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
 }
+
+

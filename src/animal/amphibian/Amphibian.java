@@ -1,9 +1,9 @@
-package Animals.Amphibious;
+package animal.amphibian;
 
-import Animals.Animals;
+import animal.Animal;
 
-public class Amphibious extends Animals {
-    public Amphibious(String animals, String name, int age, String livingEnvironment) {
+public class Amphibian extends Animal {
+    public Amphibian(String animals, String name, int age, String livingEnvironment) {
         super(animals, name, age, livingEnvironment);
     }
 
@@ -13,10 +13,10 @@ public class Amphibious extends Animals {
 
     @Override
     public void eat(String animals) {
-        if (animals == "frog"){
+        if (animals.equals("frog")){
             System.out.println("I eat mosquitoes");
         }
-        if (animals == "snack"){
+        if (animals.equals("snack")){
             System.out.println("I eat frogs and rodents");
         }
 
@@ -44,8 +44,4 @@ public class Amphibious extends Animals {
                 '}' + getClass();
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
 }

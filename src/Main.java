@@ -1,19 +1,19 @@
-import Animals.Amphibious.Amphibious;
-import Animals.Birds.Flightless.Flightless;
-import Animals.Birds.Flying.Flying;
-import Animals.Mammals.Herbivorous.Herbivorous;
-import Animals.Mammals.Predators.Predators;
+import animal.amphibian.Amphibian;
+import animal.bird.flightless.Flightless;
+import animal.bird.flying.Flying;
+import animal.mammal.herbivore.Herbivore;
+import animal.mammal.predator.Predator;
 
 public class Main {
     public static void main(String[] args) {
-        Amphibious frog = new Amphibious("frog", "Pup", 3, "pond");
+        Amphibian frog = new Amphibian("frog", "Pup", 3, "pond");
         System.out.println(frog);
         frog.eat(frog.getAnimals());
         frog.go();
         frog.sleep();
         frog.hunt();
 
-        Amphibious snackFreshWater = new Amphibious("snack", "Yel", 5, "pond");
+        Amphibian snackFreshWater = new Amphibian("snack", "Yel", 5, "pond");
         System.out.println(snackFreshWater);
         snackFreshWater.eat(snackFreshWater.getAnimals());
         snackFreshWater.go();
@@ -73,7 +73,7 @@ public class Main {
 
 
 
-        Herbivorous gazelle = new Herbivorous("Gazelle", "Gaz", 10, "savanna", 50, "plants");
+        Herbivore gazelle = new Herbivore("Gazelle", "Gaz", 10, "savanna", 50, "plants");
         System.out.println(gazelle);
         gazelle.eat(gazelle.getAnimals());
         gazelle.go();
@@ -81,7 +81,7 @@ public class Main {
         gazelle.walk();
         gazelle.graze();
 
-        Herbivorous giraffe = new Herbivorous("Giraffe", "G", 16, "savanna", 20,"plants");
+        Herbivore giraffe = new Herbivore("Giraffe", "G", 16, "savanna", 20,"plants");
         System.out.println(giraffe);
         giraffe.eat(giraffe.getAnimals());
         giraffe.go();
@@ -89,7 +89,7 @@ public class Main {
         giraffe.walk();
         giraffe.graze();
 
-        Herbivorous horse = new Herbivorous("Horse", "Ho", 14, "steppe", 50, "plants");
+        Herbivore horse = new Herbivore("Horse", "Ho", 14, "steppe", 50, "plants");
         System.out.println(horse);
         horse.eat(horse.getAnimals());
         horse.go();
@@ -97,7 +97,7 @@ public class Main {
         horse.walk();
         horse.graze();
 
-        Predators bear = new Predators("Bear", "Balu", 19, "forest", 23, "meat");
+        Predator bear = new Predator("Bear", "Balu", 19, "forest", 23, "meat");
         System.out.println(bear);
         bear.eat(bear.getAnimals());
         bear.go();
@@ -105,7 +105,7 @@ public class Main {
         bear.walk();
         bear.hunt();
 
-        Predators tiger = new Predators("Tiger", "Ti", 16, "savanna", 31, "meat");
+        Predator tiger = new Predator("Tiger", "Ti", 16, "savanna", 31, "meat");
         System.out.println(tiger);
         tiger.eat(tiger.getAnimals());
         tiger.go();
@@ -113,7 +113,7 @@ public class Main {
         tiger.walk();
         tiger.hunt();
 
-        Predators hyena = new Predators("Hyena", "Fox", 11, "savanna", 29, "meat");
+        Predator hyena = new Predator("Hyena", "Fox", 11, "savanna", 29, "meat");
         System.out.println(hyena);
         hyena.eat(hyena.getAnimals());
         hyena.go();

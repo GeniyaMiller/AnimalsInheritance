@@ -1,16 +1,18 @@
-package Animals;
+package animal;
 
-public abstract class  Animals {
+import java.util.Objects;
+
+public abstract class Animal {
     private String animals;
     private String name;
     private int age;
     private String livingEnvironment; //параметр указан у всех объектов, поэтому вынесла в класс-родитель
 
-    public Animals(String animals, String name, int age, String livingEnvironment) {
+    public Animal(String animals, String name, int age, String livingEnvironment) {
         this.animals = animals;
 
         if (checkNullOrEmptyOrBlank(name)) {
-            this.name = "Animals";
+            this.name = "animal";
         } else {
             this.name = name;
         }
@@ -69,7 +71,15 @@ public abstract class  Animals {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return age == animal.age && Objects.equals(animals, animal.animals) && Objects.equals(name, animal.name) && Objects.equals(livingEnvironment, animal.livingEnvironment);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(animals, name, age, livingEnvironment);
     }
 }

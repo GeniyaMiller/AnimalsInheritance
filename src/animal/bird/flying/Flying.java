@@ -1,9 +1,8 @@
-package Animals.Birds.Flying;
+package animal.bird.flying;
 
-import Animals.Animals;
-import Animals.Birds.Birds;
+import animal.bird.Bird;
 
-public class Flying extends Birds {
+public class Flying extends Bird {
     public Flying(String animals, String name, int age, String livingEnvironment, String typeOfMovement) {
         super(animals, name, age, livingEnvironment, typeOfMovement);
     }
@@ -16,10 +15,10 @@ public class Flying extends Birds {
 
     @Override
     public void eat(String animals) {
-        if (animals == "chaika" || animals == "albatros"){
+        if (animals.equals("chaika") || animals.equals("albatros")){
             System.out.println("I eat fish");
         }
-        if (animals == "sokol"){
+        if (animals.equals("sokol")){
             System.out.println("I eat rodents ant small reptiles");
         }
 
@@ -49,8 +48,4 @@ public class Flying extends Birds {
                 '}' + getClass();
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
 }
